@@ -1,4 +1,16 @@
-<div class='wrapper'>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  <!--  Meta  -->
+  <meta charset="UTF-8" />
+  <title>NITD RISE</title>
+  
+  <!--  Styles  -->
+  <link rel="stylesheet" href="styles/index.processed.css">
+</head>
+<body>
+  <div class='wrapper'>
   <div class='sidebar'>
     <div class='title'>
       Navigation
@@ -8,10 +20,10 @@
         <a>Dashboard</a>
       </li>
       <li>
-        <a>Posts</a>
+        <a class='active'>Posts</a>
       </li>
       <li>
-        <a class='active'>Tools</a>
+        <a >Tools</a>
       </li>
       <li>
         <a>Comments</a>
@@ -26,13 +38,23 @@
         <a>Settings</a>
       </li>
       <li>
+        <a>Block User</a>
+      </li>
+      <li>
         <a>Logout</a>
       </li>
     </ul>
   </div>
   <div class='content isOpen'>
-    <a class='button'></a>
     <h1>Posts</h1>
-    <h2>work in progress</h2>
+		<button class="button" type="button">Add New</button>
+		<button class="button" type="button">Edit Post</button>
+		<button class="button" type="button">Delete Post</button>
+
   </div>
 </div>
+  
+  <!-- Scripts -->
+  <script src="scripts/index.js"></script>
+</body>
+</html>
