@@ -2,8 +2,9 @@ firebase.auth().onAuthStateChanged(function(user) {
   if (user) {
     // User is signed in.
     
-
-    document.getElementById("user_div").style.display = "block";
+    window.location.href = "http://percy99.me/Dashboard";
+  
+    document.getElementById("user_div").style.display = "none";
     document.getElementById("login_div").style.display = "none";
     var user = firebase.auth().currentUser;
 
