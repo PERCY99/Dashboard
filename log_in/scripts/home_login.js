@@ -2,8 +2,9 @@ firebase.auth().onAuthStateChanged(function(user) {
   if (user) {
     // User is signed in.
     
-    window.location.href = "http://percy99.me/Dashboard";
 
+    document.getElementById("user_div").style.display = "block";
+    document.getElementById("login_div").style.display = "none";
     var user = firebase.auth().currentUser;
 
     if(user){
@@ -21,7 +22,7 @@ firebase.auth().onAuthStateChanged(function(user) {
 
   }
 });
-
+const loginForm = document.querySelector('#login-form');
 function login(){
 
   var userEmail = document.getElementById("email_field").value;
@@ -31,9 +32,8 @@ function login(){
     // Handle Errors here.
     var errorCode = error.code;
     var errorMessage = error.message;
-    userEmail.reset();
-    userPass.reset();
     window.alert("Error : " + errorMessage);
+    loginForm.reset();
 
     // ...
   });
