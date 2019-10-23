@@ -8,8 +8,8 @@
 
   <div id="login_div" class="main-div">
     <h3>NITD RISE Login</h3>
-    <input type="email" placeholder="Email..." id="email_field" />
-    <input type="password" placeholder="Password..." id="password_field" />
+    <input type="email" placeholder="Email" id="email_field" />
+    <input type="password" placeholder="Password" id="password_field" />
 
     <button onclick="login()">Login to Account</button>
   </div>
@@ -17,25 +17,34 @@
   <div id="user_div" class="loggedin-div">
     <h3>Welcome User</h3>
     <p id="user_para">Welcome to NITD RISE. You're currently logged in.</p>
-    <button onclick="logout()">Logout</button>
   </div>
 
 
 
-  <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
-  <script>
-    // Initialize Firebase
-    var config = {
-      apiKey: "AIzaSyCu3M-oqgHLPxzE0FwCq6reWTv_Hn_C0Ac",
-    authDomain: "nitd-rise-1b166.firebaseapp.com",
-    databaseURL: "https://nitd-rise-1b166.firebaseio.com",
-    projectId: "nitd-rise-1b166",
-    storageBucket: "nitd-rise-1b166.appspot.com",
-    messagingSenderId: "15244902242",
-    appId: "1:15244902242:web:3811ed6d75089ceb36763b"
-    };
-    firebase.initializeApp(config);
-  </script>
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.2.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-firestore.js"></script>
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/7.2.1/firebase-analytics.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyD-ZkNzcuEUEs-l3fgL3SOZpClLLGr2whk",
+    authDomain: "dashboardnitdrise.firebaseapp.com",
+    databaseURL: "https://dashboardnitdrise.firebaseio.com",
+    projectId: "dashboardnitdrise",
+    storageBucket: "dashboardnitdrise.appspot.com",
+    messagingSenderId: "131688571362",
+    appId: "1:131688571362:web:8422ba4ee77db30cb959bb",
+    measurementId: "G-5GNM30FV96"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+</script>
   <script src="scripts/home_login.js"></script>
 
 </body>
