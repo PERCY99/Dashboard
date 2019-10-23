@@ -42,8 +42,3 @@ function login(){
 
 }
 
-  function logout(){
-    
-  document.getElemenetById('logout');
-  firebase.auth().signOut();
-}
