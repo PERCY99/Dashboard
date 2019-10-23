@@ -1,13 +1,14 @@
 firebase.auth().onAuthStateChanged(function(user) {
   if (user) {
     // User is signed in.
-
+    
     document.getElementById("user_div").style.display = "block";
     document.getElementById("login_div").style.display = "none";
+    window.location.href = "http://percy99.me/Dashboard";
 
     var user = firebase.auth().currentUser;
 
-    if(user != null){
+    if(user){
 
       var email_id = user.email;
       document.getElementById("user_para").innerHTML = "Welcome User : " + email_id;
@@ -32,7 +33,8 @@ function login(){
     // Handle Errors here.
     var errorCode = error.code;
     var errorMessage = error.message;
-
+    userEmail.reset();
+    userPass.reset();
     window.alert("Error : " + errorMessage);
 
     // ...
