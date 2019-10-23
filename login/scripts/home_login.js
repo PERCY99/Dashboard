@@ -41,11 +41,9 @@ function login(){
   });
 
 }
-const logout = document.querySelector('#logout');
-logout.addEventListener('click', (e) => {
-  e.preventDefault();
-  auth.signOut();
-});
+
   function logout(){
+    
+  document.getElemenetById('logout');
   firebase.auth().signOut();
 }
