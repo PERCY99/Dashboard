@@ -18,6 +18,7 @@ firebase.auth().onAuthStateChanged(function(user) {
 
   } else {
     // No user is signed in.
+    window.location.href = "http://percy99.me/Dashboard/login/login.html";
 
     document.getElementById("user_div").style.display = "none";
     document.getElementById("login_div").style.display = "block";
